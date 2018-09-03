@@ -29,7 +29,7 @@ namespace laf12_3
             bool success;
             Heap theHeap = new Heap(31);
 
-            theHeap.insert(70);//hjhjh
+            theHeap.insert(70);
             theHeap.insert(40);
             theHeap.insert(50);
             theHeap.insert(20);
@@ -40,6 +40,19 @@ namespace laf12_3
             theHeap.insert(10);
             theHeap.insert(90);
             theHeap.insert(110);
+
+            Random r = new Random();
+            Console.WriteLine("enter priority size: ");
+            val = getInt();
+            priorityQ pq = new priorityQ(val);
+            for (int i = 0; i < val; i++)
+            {
+                int num = r.Next(99);
+                pq.insert(num);
+            }
+            pq.display();
+            pq.remover();
+            pq.display();
 
             while (true)
             {
