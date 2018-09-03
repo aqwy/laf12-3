@@ -29,7 +29,7 @@ namespace laf12_3
             bool success;
             Heap theHeap = new Heap(31);
 
-            theHeap.insert(70);
+            theHeap.insert(70);//hjhjh
             theHeap.insert(40);
             theHeap.insert(50);
             theHeap.insert(20);
