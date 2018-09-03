@@ -43,7 +43,7 @@ namespace laf12_3
 
             while (true)
             {
-                Console.WriteLine("enter first letter of: show,insert,delete,toss,heap-restore or change ");
+                Console.WriteLine("enter first letter of: show,insert,delete,toss,heap-restore,reset-all or change ");
                 char choise = getChar();
                 switch (choise)
                 {
@@ -81,6 +81,10 @@ namespace laf12_3
                         break;
                     case 'h':
                         theHeap.restoreHeap();
+                        break;
+                    case 'r':
+                        while (theHeap.getCurrentSize() != 0)
+                            theHeap.remove();
                         break;
                     default:
                         Console.WriteLine("invalid entry!");

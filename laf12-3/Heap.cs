@@ -50,11 +50,11 @@ namespace laf12_3
             {
                 int leftChild = 2 * index + 1;
                 int rightChild = leftChild + 1;
-                if (rightChild < currentSize && heapArray[leftChild].getData() < heapArray[rightChild].getData())
+                if (rightChild < currentSize && heapArray[leftChild].getData() > heapArray[rightChild].getData())
                     largerChild = rightChild;
                 else
                     largerChild = leftChild;
-                if (top.getData() >= heapArray[largerChild].getData())
+                if (top.getData() <= heapArray[largerChild].getData())
                     break;
                 heapArray[index] = heapArray[largerChild];
                 index = largerChild;
@@ -137,6 +137,10 @@ namespace laf12_3
             {
                 trickleUp(i);
             }
+        }
+        public int getCurrentSize()
+        {
+            return currentSize;
         }
     }
 }
